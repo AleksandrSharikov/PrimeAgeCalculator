@@ -30,7 +30,10 @@ public class Main {
                     }
                     System.out.println(birthYear + nearestPrime(age));
                 } catch (NumberFormatException e) {
-                    System.out.println("Format error. \nPlease, enter your year of birth, or \"Exit\" for exit the app");
+                    System.out.println("""
+                            Format error.
+                            Please, enter your year of birth in digital format ex. 1980,
+                            or "Exit" to exit the app""");
                 }
             }
         }
