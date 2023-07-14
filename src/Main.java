@@ -6,8 +6,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String inString = "";
         String welcomString = """
-                This program should calculate a nearest next year where your age will be a prime number
-                Enter the year of your birth. When you done with this app, type "Exit"
+                This program should calculate the nearest next year where your age will be a prime number
+                Enter the year of your birth. When you are done with this app, type "Exit"
                 Years with "-" could be considered as B.C.""";
         int currentYear = LocalDate.now().getYear();
         int birthYear;
@@ -25,15 +25,12 @@ public class Main {
                         System.out.println("You should be already born to use this app");
                         System.out.print("Anyway the answer is ");
                     }
-                    if (age > 130) {
-                        System.out.println("Are you sure you are older then 130 years?");
-                    }
                     if (birthYear < 0) {
-                        System.out.println("I consider \"-\" as B.C.");
+                        System.out.println("\"-\" will be considered as B.C.");
                     }
                     System.out.println(birthYear + nearestPrime(age));
                 } catch (NumberFormatException e) {
-                    System.out.println("Format error. \nPlease, enter your year of birth, or \"Exit\" for exit app");
+                    System.out.println("Format error. \nPlease, enter your year of birth, or \"Exit\" for exit the 20 app");
                 }
             }
         }
